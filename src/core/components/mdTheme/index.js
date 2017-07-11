@@ -6,10 +6,10 @@ import { changeHtmlMetaColor, createNewStyleElement } from './dom';
 const VALID_THEME_TYPE = ['primary', 'accent', 'background', 'warn', 'hue-1', 'hue-2', 'hue-3'];
 const TYPE_REGEX = new RegExp('(' + VALID_THEME_TYPE.join('|').toUpperCase() + ')-(COLOR|CONTRAST)-?(A?\\d*)-?(\\d*\\.?\\d+)?', 'g');
 const DEFAULT_THEME_COLORS = {
-  primary: 'indigo',
-  accent: 'pink',
+  primary: 'red',
+  accent: 'grey',
   background: 'white',
-  warn: 'deep-orange'
+  warn: 'amber'
 };
 /*const DEFAULT_HUES = {
   accent: {
@@ -95,7 +95,7 @@ const parseStyle = (style, theme, name) => {
 
 function warnNotFound(themeName) {
   console.warn(`The theme '${themeName}' doesn't exists. You need to register` +
-    ' it first in order to use.');
+        ' it first in order to use.');
 }
 
 function injectStyle(style, spec, name, styleId) {
@@ -169,10 +169,10 @@ export default function install(Vue) {
 
         if (changeHtmlMetaColor) {
           changeHtmlMetaColor(
-            registeredPrimaryColor[name],
-            prefix + this.currentTheme,
-            prefix + name
-          );
+                        registeredPrimaryColor[name],
+                        prefix + this.currentTheme,
+                        prefix + name
+                    );
         }
 
         this.currentTheme = name;

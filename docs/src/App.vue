@@ -181,6 +181,11 @@
                 <md-list-item class="md-inset">
                   <router-link exact to="/ui-elements/typography">Typography</router-link>
                 </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/ui-elements/datatable-template">Datatable Template</router-link>
+                </md-list-item>
+
               </md-list>
             </md-list-expand>
           </md-list-item>
@@ -195,7 +200,7 @@
         </md-list>
       </div>
 
-      <release-version></release-version>
+      <!--<release-version></release-version>-->
     </md-sidenav>
 
     <transition name="md-router" appear>

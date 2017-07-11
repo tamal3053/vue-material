@@ -40,6 +40,7 @@ const Tooltip = (r) => require.ensure([], () => r(require('./pages/components/To
 const Whiteframe = (r) => require.ensure([], () => r(require('./pages/components/Whiteframe')), 'whiteframe');
 
 /* UI Elements */
+const DataTableTemplate = (r) => require.ensure([], () => r(require('./pages/ui-elements/DataTableTemplate')), 'ui-datatable-template');
 const Typography = (r) => require.ensure([], () => r(require('./pages/ui-elements/Typography')), 'ui-elements');
 const Layout = (r) => require.ensure([], () => r(require('./pages/ui-elements/Layout')), 'ui-elements');
 
@@ -47,239 +48,238 @@ const Layout = (r) => require.ensure([], () => r(require('./pages/ui-elements/La
 const Configuration = (r) => require.ensure([], () => r(require('./pages/themes/Configuration')), 'themes');
 const DynamicThemes = (r) => require.ensure([], () => r(require('./pages/themes/DynamicThemes')), 'themes');
 
-const main = [
-  {
-    path: '/',
-    name: 'introduction',
-    component: Introduction
-  },
-  {
-    path: '/getting-started',
-    name: 'getting-started',
-    component: GettingStarted
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: About
-  },
-  {
-    path: '/changelog',
-    name: 'changelog',
-    component: Changelog
-  }
+const main = [{
+  path: '/',
+  name: 'introduction',
+  component: Introduction
+},
+{
+  path: '/getting-started',
+  name: 'getting-started',
+  component: GettingStarted
+},
+{
+  path: '/about',
+  name: 'about',
+  component: About
+},
+{
+  path: '/changelog',
+  name: 'changelog',
+  component: Changelog
+}
 ];
 
-const components = [
-  {
-    path: '/components',
-    name: 'components',
-    redirect: '/components/avatar'
-  },
-  {
-    path: '/components/avatar',
-    name: 'components:avatar',
-    component: Avatar
-  },
-  {
-    path: '/components/bottom-bar',
-    name: 'components:bottom-bar',
-    component: BottomBar
-  },
-  {
-    path: '/components/button',
-    name: 'components:button',
-    component: Buttons
-  },
-  {
-    path: '/components/button-toggle',
-    name: 'components:button-toggle',
-    component: ButtonToggle
-  },
-  {
-    path: '/components/card',
-    name: 'components:card',
-    component: Card
-  },
-  {
-    path: '/components/checkbox',
-    name: 'components:checkbox',
-    component: Checkbox
-  },
-  {
-    path: '/components/chips',
-    name: 'components:chips',
-    component: Chips
-  },
-  {
-    path: '/components/dialog',
-    name: 'components:dialog',
-    component: Dialog
-  },
-  {
-    path: '/components/file',
-    name: 'components:file',
-    component: FileComponent
-  },
-  {
-    path: '/components/icon',
-    name: 'components:icon',
-    component: Icon
-  },
-  {
-    path: '/components/image-loader',
-    name: 'components:image-loader',
-    component: ImageLoader
-  },
-  {
-    path: '/components/ink-ripple',
-    name: 'components:ink-ripple',
-    component: InkRipple
-  },
-  {
-    path: '/components/input',
-    name: 'components:input',
-    component: Input
-  },
-  {
-    path: '/components/list',
-    name: 'components:list',
-    component: List
-  },
-  {
-    path: '/components/menu',
-    name: 'components:menu',
-    component: Menu
-  },
-  {
-    path: '/components/onboarding',
-    name: 'components:onboarding',
-    component: Onboarding
-  },
-  {
-    path: '/components/progress',
-    name: 'components:progress',
-    component: Progress
-  },
-  {
-    path: '/components/radio',
-    name: 'components:radio',
-    component: Radio
-  },
-  {
-    path: '/components/rating-bar',
-    name: 'components:rating-bar',
-    component: RatingBar
-  },
-  {
-    path: '/components/select',
-    name: 'components:select',
-    component: Select
-  },
-  {
-    path: '/components/sidenav',
-    name: 'components:sidenav',
-    component: Sidenav
-  },
-  {
-    path: '/components/snackbar',
-    name: 'components:snackbar',
-    component: Snackbar
-  },
-  {
-    path: '/components/speed-dial',
-    name: 'components:speed-dial',
-    component: SpeedDial
-  },
-  {
-    path: '/components/spinner',
-    name: 'components:spinner',
-    component: Spinner
-  },
-  {
-    path: '/components/stepper',
-    name: 'components:stepper',
-    component: Stepper
-  },
-  {
-    path: '/components/subheader',
-    name: 'components:subheader',
-    component: Subheader
-  },
-  {
-    path: '/components/switch',
-    name: 'components:switch',
-    component: Switch
-  },
-  {
-    path: '/components/table',
-    name: 'components:table',
-    component: Table
-  },
-  {
-    path: '/components/tabs',
-    name: 'components:tabs',
-    component: Tabs
-  },
-  {
-    path: '/components/toolbar',
-    name: 'components:toolbar',
-    component: Toolbar
-  },
-  {
-    path: '/components/tooltip',
-    name: 'components:tooltip',
-    component: Tooltip
-  },
-  {
-    path: '/components/whiteframe',
-    name: 'components:whiteframe',
-    component: Whiteframe
-  }
+const components = [{
+  path: '/components',
+  name: 'components',
+  redirect: '/components/avatar'
+},
+{
+  path: '/components/avatar',
+  name: 'components:avatar',
+  component: Avatar
+},
+{
+  path: '/components/bottom-bar',
+  name: 'components:bottom-bar',
+  component: BottomBar
+},
+{
+  path: '/components/button',
+  name: 'components:button',
+  component: Buttons
+},
+{
+  path: '/components/button-toggle',
+  name: 'components:button-toggle',
+  component: ButtonToggle
+},
+{
+  path: '/components/card',
+  name: 'components:card',
+  component: Card
+},
+{
+  path: '/components/checkbox',
+  name: 'components:checkbox',
+  component: Checkbox
+},
+{
+  path: '/components/chips',
+  name: 'components:chips',
+  component: Chips
+},
+{
+  path: '/components/dialog',
+  name: 'components:dialog',
+  component: Dialog
+},
+{
+  path: '/components/file',
+  name: 'components:file',
+  component: FileComponent
+},
+{
+  path: '/components/icon',
+  name: 'components:icon',
+  component: Icon
+},
+{
+  path: '/components/image-loader',
+  name: 'components:image-loader',
+  component: ImageLoader
+},
+{
+  path: '/components/ink-ripple',
+  name: 'components:ink-ripple',
+  component: InkRipple
+},
+{
+  path: '/components/input',
+  name: 'components:input',
+  component: Input
+},
+{
+  path: '/components/list',
+  name: 'components:list',
+  component: List
+},
+{
+  path: '/components/menu',
+  name: 'components:menu',
+  component: Menu
+},
+{
+  path: '/components/onboarding',
+  name: 'components:onboarding',
+  component: Onboarding
+},
+{
+  path: '/components/progress',
+  name: 'components:progress',
+  component: Progress
+},
+{
+  path: '/components/radio',
+  name: 'components:radio',
+  component: Radio
+},
+{
+  path: '/components/rating-bar',
+  name: 'components:rating-bar',
+  component: RatingBar
+},
+{
+  path: '/components/select',
+  name: 'components:select',
+  component: Select
+},
+{
+  path: '/components/sidenav',
+  name: 'components:sidenav',
+  component: Sidenav
+},
+{
+  path: '/components/snackbar',
+  name: 'components:snackbar',
+  component: Snackbar
+},
+{
+  path: '/components/speed-dial',
+  name: 'components:speed-dial',
+  component: SpeedDial
+},
+{
+  path: '/components/spinner',
+  name: 'components:spinner',
+  component: Spinner
+},
+{
+  path: '/components/stepper',
+  name: 'components:stepper',
+  component: Stepper
+},
+{
+  path: '/components/subheader',
+  name: 'components:subheader',
+  component: Subheader
+},
+{
+  path: '/components/switch',
+  name: 'components:switch',
+  component: Switch
+},
+{
+  path: '/components/table',
+  name: 'components:table',
+  component: Table
+},
+{
+  path: '/components/tabs',
+  name: 'components:tabs',
+  component: Tabs
+},
+{
+  path: '/components/toolbar',
+  name: 'components:toolbar',
+  component: Toolbar
+},
+{
+  path: '/components/tooltip',
+  name: 'components:tooltip',
+  component: Tooltip
+},
+{
+  path: '/components/whiteframe',
+  name: 'components:whiteframe',
+  component: Whiteframe
+}
 ];
 
-const theme = [
-  {
-    path: '/themes',
-    name: 'themes',
-    redirect: '/themes/configuration'
-  },
-  {
-    path: '/themes/configuration',
-    name: 'themes:configuration',
-    component: Configuration
-  },
-  {
-    path: '/themes/dynamic-themes',
-    name: 'themes:dynamic-themes',
-    component: DynamicThemes
-  }
+const theme = [{
+  path: '/themes',
+  name: 'themes',
+  redirect: '/themes/configuration'
+},
+{
+  path: '/themes/configuration',
+  name: 'themes:configuration',
+  component: Configuration
+},
+{
+  path: '/themes/dynamic-themes',
+  name: 'themes:dynamic-themes',
+  component: DynamicThemes
+}
 ];
 
-const uiElements = [
-  {
-    path: '/ui-elements',
-    name: 'ui-elements',
-    redirect: '/ui-elements/typography'
-  },
-  {
-    path: '/ui-elements/typography',
-    name: 'ui-elements:typography',
-    component: Typography
-  },
-  {
-    path: '/ui-elements/layout',
-    name: 'ui-elements:layout',
-    component: Layout
-  }
+const uiElements = [{
+  path: '/ui-elements',
+  name: 'ui-elements',
+  redirect: '/ui-elements/typography'
+},
+{
+  path: '/ui-elements/typography',
+  name: 'ui-elements:typography',
+  component: Typography
+},
+{
+  path: '/ui-elements/layout',
+  name: 'ui-elements:layout',
+  component: Layout
+},
+{
+  path: '/ui-elements/datatable-template',
+  name: 'ui-elements:datatable-template',
+  component: DataTableTemplate
+}
 ];
 
-const error = [
-  {
-    path: '*',
-    name: 'error',
-    component: Error404
-  }
-];
+const error = [{
+  path: '*',
+  name: 'error',
+  component: Error404
+}];
 
 export default [].concat(main, components, theme, uiElements, error);
